@@ -1,0 +1,16 @@
+#eredmeny {
+    font-size: large;
+    font-size: 100px;
+    color:greenyellow;
+}
+body{
+    background-color: black;
+}
+#keszul{
+    font-size: large;
+    font-size: 100px;
+    color:blue;
+}
+input[type="number"]{
+    background-color: black;
+}

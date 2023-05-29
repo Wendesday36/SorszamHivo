@@ -14,17 +14,23 @@
         }
         if (event.keyCode === 77) {
           var input = document.getElementById("szam").value;
-          document.getElementById("eredmeny").innerHTML = "készül:" + input;
+          document.getElementById("keszul").innerHTML = "készül:" + input;
         } else if (event.keyCode === 84) {
-          // Esc billentyű
+          // t billentyű
           document.getElementById("szam").value = "";
           document.getElementById("eredmeny").innerHTML = "";
+        }else if (event.keyCode === 27) {
+          // t billentyű
+          document.getElementById("szam").value = "";
+          document.getElementById("keszul").innerHTML = "";
         }
       }
     </script>
+     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <input type="number" id="szam" min="0" max="1000" onkeydown="szamKesz(event)"/>
     <h1 id="eredmeny"></h1>
+    <h1 id="keszul"></h1>
   </body>
 </html>
