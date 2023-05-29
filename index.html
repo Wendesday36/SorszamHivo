@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Szám bekérése</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      function szamKesz(event) {
+        if (event.keyCode === 75) {
+          // Enter billentyű
+          var input = document.getElementById("szam").value;
+          if (input >= 0 && input <= 1000) {
+            document.getElementById("eredmeny").innerHTML = "Kész: " + input;
+          }
+        }
+        if (event.keyCode === 77) {
+          var input = document.getElementById("szam").value;
+          document.getElementById("eredmeny").innerHTML = "készül:" + input;
+        } else if (event.keyCode === 84) {
+          // Esc billentyű
+          document.getElementById("szam").value = "";
+          document.getElementById("eredmeny").innerHTML = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="szam" min="0" max="1000" />
+    <h1 id="eredmeny"></h1>
+  </body>
+</html>
